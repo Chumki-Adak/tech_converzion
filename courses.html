@@ -332,7 +332,72 @@
 @media (max-width: 550px) {
     .courses-grid-container { grid-template-columns: 1fr; }
 }
+    /* Header and Navigation Styles */
+.site-header {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    border-bottom: 1px solid #eee;
+    background: #fff;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-bold {
+    font-size: 24px;
+    font-weight: 800;
+    color: #003399;
+    letter-spacing: 1px;
+}
+
+.logo-sub {
+    font-size: 9px;
+    color: #666;
+    font-weight: bold;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #444;
+    margin: 0 15px;
+    font-weight: 600;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover, .nav-menu a.active {
+    color: #d91b5c;
+}
+
+.btn-nav {
+    background-color: #d91b5c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
 </style>
+<header class="site-header">
+    <div class="logo">
+        <span class="logo-bold">KEYONICS</span>
+        <span class="logo-sub">GOVERNMENT CERTIFIED COMPUTER EDUCATION</span>
+    </div>
+    <nav class="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="courses.html" class="active">Courses</a>
+        <a href="#">About</a>
+        <a href="#">Certifications</a>
+        <a href="#">Student Reviews</a>
+        <a href="#">Contact</a>
+    </nav>
+    <a href="#" class="btn-nav">Book Free Counselling</a>
+</header>
 
 <section class="browse-all-courses-section">
     <div class="courses-header-area">
