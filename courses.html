@@ -1,28 +1,21 @@
+নিচে সম্পূর্ণ কোডটি দেওয়া হলো। এতে কোনো বাংলা মন্তব্য (comment) নেই এবং CSS ও HTML একসাথেই সাজানো আছে।
+
+```html
 <style>
-/* Top Bar Styling */
+* { box-sizing: border-box; }
+.custom-website { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+
 .top-bar {
-    background-color: #003399; 
+    background-color: #003399;
     color: white;
     display: flex;
-    justify-content: center; 
-    gap: 30px;              
+    justify-content: center;
+    gap: 30px;
     padding: 10px 20px;
     font-size: 13px;
     font-weight: 500;
     text-align: center;
 }
-
-
-@media (max-width: 600px) {
-    .top-bar {
-        flex-direction: column;
-        gap: 5px;
-        padding: 8px;
-    }
-}
-* { box-sizing: border-box; }
-.custom-website { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
-
 
 .site-header {
     display: flex !important;
@@ -49,309 +42,153 @@
 .nav-menu a:hover, .nav-menu a.active { color: #d91b5c; }
 .btn-nav { background-color: #d91b5c; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; font-size: 14px; }
 
-/* Browse Courses Section */
-.browse-all-courses-section {
-    padding: 60px 5%;
-    background-color: #ffffff;
-    text-align: center;
-}
-
+.browse-all-courses-section { padding: 60px 5%; background-color: #ffffff; text-align: center; }
 .courses-header-area { margin-bottom: 35px; }
 .courses-header-area h2 { font-size: 36px; color: #0d3b66; margin: 0 0 12px 0; font-weight: 800; }
 .courses-header-area p { font-size: 15px; color: #64748b; margin: 0; }
 
-/* Search and Filter Row */
-.search-filter-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 25px;
-    max-width: 1140px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.search-input-box {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    background: #f8fafc;
-    border: 1px solid #e2e8f0;
-    padding: 12px 16px;
-    border-radius: 8px;
-    flex: 1.5;
-}
-
+.search-filter-row { display: flex; justify-content: center; align-items: center; gap: 15px; margin-bottom: 25px; max-width: 1140px; margin-left: auto; margin-right: auto; }
+.search-input-box { display: flex; align-items: center; gap: 10px; background: #f8fafc; border: 1px solid #e2e8f0; padding: 12px 16px; border-radius: 8px; flex: 1.5; }
 .search-input-box input { border: none; background: transparent; width: 100%; outline: none; font-size: 14px; color: #334155; }
 
 .filter-dropdowns { display: flex; gap: 12px; flex: 2; }
 .custom-select { background: #ffffff; border: 1px solid #e2e8f0; padding: 12px 16px; border-radius: 8px; font-size: 13px; color: #475569; outline: none; cursor: pointer; flex: 1; }
 
-/* Filter Pills */
 .filter-pills-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-bottom: 30px; max-width: 1140px; margin-left: auto; margin-right: auto; }
 .pill-btn { background: #ffffff; border: 1px solid #e2e8f0; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 500; color: #475569; cursor: pointer; transition: 0.2s; }
 .pill-btn:hover { background: #f1f5f9; }
 .pill-btn.active { background: #003049; color: #ffffff; border-color: #003049; }
 
-/* Course Grid */
-.courses-grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-    max-width: 1140px;
-    margin: 0 auto;
-}
+.showing-counter { text-align: left; max-width: 1140px; margin: 0 auto 20px auto; }
+.showing-counter p { font-size: 14px; color: #64748b; font-weight: 600; margin: 0; }
+.highlight-count { font-weight: 700; color: #d62828; }
 
-.course-listing-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 24px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    transition: 0.2s;
-}
-
+.courses-grid-container { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; max-width: 1140px; margin: 0 auto; }
+.course-listing-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; text-align: left; display: flex; flex-direction: column; transition: 0.2s; }
 .course-listing-card:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
 
-/* Responsive Media Queries */
+.card-icons-header { display: flex; align-items: center; gap: 6px; margin-bottom: 16px; height: 36px; }
+.brand-badge { width: 28px; height: 28px; border-radius: 4px; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 13px; color: #ffffff; }
+.ms-w { background-color: #107c41; }
+.ms-x { background-color: #1f7244; }
+.ms-p { background-color: #b7472a; }
+.xl-badge { background-color: #107c41; width: 36px; height: 36px; font-size: 18px; }
+.tally-box-badge { background-color: #e3f2fd; color: #0d47a1; padding: 4px 8px; border-radius: 4px; font-weight: 800; font-size: 11px; line-height: 1; }
+.tally-box-badge span { color: #f57c00; }
+.tally-box-badge small { font-size: 8px; font-weight: 500; color: #455a64; }
+.adobe-badge { background-color: #001e36; color: #00a8ff; width: 36px; height: 36px; border-radius: 6px; display: flex; justify-content: center; align-items: center; font-weight: 800; font-size: 16px; border: 1px solid #00a8ff; }
+.emoji-brand { font-size: 32px; }
+.text-brand-logo { font-size: 32px; font-weight: 800; color: #0059b3; }
+
+.course-listing-card h3 { font-size: 17px; color: #0f172a; margin: 0 0 10px 0; font-weight: 700; }
+.course-listing-card p { font-size: 13px; color: #64748b; line-height: 1.5; margin: 0 0 16px 0; flex-grow: 1; }
+.card-meta-tags { display: flex; gap: 8px; margin-bottom: 18px; }
+.meta-tag { font-size: 11px; font-weight: 600; padding: 5px 10px; border-radius: 6px; display: inline-flex; align-items: center; gap: 4px; }
+.meta-tag.duration { background: #f1f5f9; color: #475569; }
+.level-bg.beginner { background: #e2f6ed; color: #15803d; }
+.level-bg.intermediate { background: #fff3e5; color: #b45309; }
+.card-footer-action { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f1f5f9; padding-top: 12px; }
+.card-footer-action a { text-decoration: none; color: #003049; font-weight: 700; font-size: 13px; }
+.action-btn-arrow { background: #d62828; color: white; width: 24px; height: 24px; border-radius: 4px; display: flex; justify-content: center; align-items: center; font-weight: bold; font-size: 12px; }
+.compact-row-card { justify-content: space-between; min-height: 130px; }
+.view-all-btn-container { text-align: center; padding: 30px 0; }
+.view-all-courses-btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; background-color: #0040c0; color: #ffffff !important; font-size: 16px; font-weight: 600; text-decoration: none !important; padding: 14px 36px; border-radius: 10px; box-shadow: 0 4px 14px rgba(0, 64, 192, 0.25); transition: 0.3s; }
+
 @media (max-width: 1200px) { .courses-grid-container { grid-template-columns: repeat(3, 1fr); } }
 @media (max-width: 850px) { 
     .courses-grid-container { grid-template-columns: repeat(2, 1fr); } 
     .search-filter-row { flex-direction: column; }
-    .filter-dropdowns { width: 100%; flex-direction: column; }
+    .filter-dropdowns { width: 100%; }
 }
-@media (max-width: 550px) { .courses-grid-container { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { 
+    .top-bar { flex-direction: column; gap: 5px; padding: 8px; }
+    .courses-grid-container { grid-template-columns: 1fr; }
+}
 </style>
-<div class="custom-website">
-    
 
+<div class="custom-website">
     <div class="top-bar">
         <span>✓ Government Recognized</span>
         <span>✓ KEYONICS Certified</span>
         <span>✓ Practical Computer Training For Real Careers</span>
     </div>
-<header class="site-header">
-    <div class="logo">
-        <span class="logo-bold">KEYONICS</span>
-        <span class="logo-sub">GOVERNMENT CERTIFIED COMPUTER EDUCATION</span>
+
+    <header class="site-header">
+        <div class="logo">
+            <span class="logo-bold">KEYONICS</span>
+            <span class="logo-sub">GOVERNMENT CERTIFIED COMPUTER EDUCATION</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="courses.html" class="active">Courses</a>
+            <a href="#">About</a>
+            <a href="#">Certifications</a>
+            <a href="#">Student Reviews</a>
+            <a href="#">Contact</a>
+        </nav>
+        <a href="#" class="btn-nav">Book Free Counselling</a>
+    </header>
+
+    <section class="browse-all-courses-section">
+        <div class="courses-header-area">
+            <h2>Browse All Courses</h2>
+            <p>Find the right computer course by category, skill level, and career goal.</p>
+        </div>
+
+        <div class="search-filter-row">
+            <div class="search-input-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" placeholder="Search courses...">
+            </div>
+            <div class="filter-dropdowns">
+                <select class="custom-select"><option>Category</option></select>
+                <select class="custom-select"><option>Duration</option></select>
+                <select class="custom-select"><option>Mode</option></select>
+            </div>
+        </div>
+
+        <div class="filter-pills-row">
+            <button class="pill-btn active">All Courses</button>
+            <button class="pill-btn">Accounting</button>
+            <button class="pill-btn">Programming</button>
+            <button class="pill-btn">Designing</button>
+            <button class="pill-btn">Office Productivity</button>
+            <button class="pill-btn">Typing</button>
+            <button class="pill-btn">Web Development</button>
+            <button class="pill-btn">Data Analytics</button>
+            <button class="pill-btn">Digital Skills</button>
+        </div>
+
+        <div class="showing-counter">
+            <p>Showing <span class="highlight-count">11</span> courses</p>
+        </div>
+
+        <div class="courses-grid-container">
+            <div class="course-listing-card">
+                <div class="card-icons-header">
+                    <div class="brand-badge ms-w">W</div>
+                    <div class="brand-badge ms-x">X</div>
+                    <div class="brand-badge ms-p">P</div>
+                </div>
+                <h3>MS Office</h3>
+                <p>Learn Word, Excel, PowerPoint and Access for everyday productivity.</p>
+                <div class="card-meta-tags">
+                    <span class="meta-tag duration">🕒 1 Month</span>
+                    <span class="meta-tag level-bg beginner">📊 Beginner</span>
+                </div>
+                <div class="card-footer-action">
+                    <a href="#">View Details</a>
+                    <span class="action-btn-arrow">→</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="view-all-btn-container">
+        <a href="#" class="view-all-courses-btn">
+            View All Courses <span class="btn-arrow">→</span>
+        </a>
     </div>
-    <nav class="nav-menu">
-        <a href="index.html">Home</a>
-        <a href="courses.html" class="active">Courses</a>
-        <a href="#">About</a>
-        <a href="#">Certifications</a>
-        <a href="#">Student Reviews</a>
-        <a href="#">Contact</a>
-    </nav>
-    <a href="#" class="btn-nav">Book Free Counselling</a>
-</header>
-
-<section class="browse-all-courses-section">
-    <div class="courses-header-area">
-        <h2>Browse All Courses</h2>
-        <p>Find the right computer course by category, skill level, and career goal.</p>
-    </div>
-
-    <div class="search-filter-row">
-        <div class="search-input-box">
-            <span class="search-icon">🔍</span>
-            <input type="text" placeholder="Search courses...">
-        </div>
-        <div class="filter-dropdowns">
-            <select class="custom-select"><option>Category</option></select>
-            <select class="custom-select"><option>Duration</option></select>
-            <select class="custom-select"><option>Mode</option></select>
-        </div>
-    </div>
-
-    <div class="filter-pills-row">
-        <button class="pill-btn active">All Courses</button>
-        <button class="pill-btn">Accounting</button>
-        <button class="pill-btn">Programming</button>
-        <button class="pill-btn">Designing</button>
-        <button class="pill-btn">Office Productivity</button>
-        <button class="pill-btn">Typing</button>
-        <button class="pill-btn">Web Development</button>
-        <button class="pill-btn">Data Analytics</button>
-        <button class="pill-btn">Digital Skills</button>
-    </div>
-
-    <div class="showing-counter">
-        <p>Showing <span class="highlight-count">11</span> courses</p>
-    </div>
-
-    <div class="courses-grid-container">
-        <div class="course-listing-card">
-            <div class="card-icons-header">
-                <div class="brand-badge ms-w">W</div>
-                <div class="brand-badge ms-x">X</div>
-                <div class="brand-badge ms-p">P</div>
-            </div>
-            <h3>MS Office</h3>
-            <p>Learn Word, Excel, PowerPoint and Access for everyday productivity.</p>
-            <div class="card-meta-tags">
-                <span class="meta-tag duration"><span class="icon">🕒</span> 1 Month</span>
-                <span class="meta-tag level-bg beginner"><span class="icon">📊</span> Beginner</span>
-            </div>
-            <div class="card-footer-action">
-                <a href="#">View Details</a>
-                <span class="action-btn-arrow">→</span>
-            </div>
-        </div>
-
-        <div class="course-listing-card">
-            <div class="card-icons-header">
-                <div class="brand-badge xl-badge">X</div>
-            </div>
-            <h3>Advanced Excel</h3>
-            <p>Master formulas, functions, charts, PivotTables and data analysis.</p>
-            <div class="card-meta-tags">
-                <span class="meta-tag duration"><span class="icon">🕒</span> 1.5 Months</span>
-                <span class="meta-tag level-bg intermediate"><span class="icon">📊</span> Intermediate</span>
-            </div>
-            <div class="card-footer-action">
-                <a href="#">View Details</a>
-                <span class="action-btn-arrow">→</span>
-            </div>
-        </div>
-
-        <div class="course-listing-card">
-            <div class="card-icons-header">
-                <div class="tally-box-badge">Tally <span>Prime</span><br><small>with GST</small></div>
-            </div>
-            <h3>Tally Prime with GST</h3>
-            <p>Learn accounting, inventory and GST billing with Tally Prime.</p>
-            <div class="card-meta-tags">
-                <span class="meta-tag duration"><span class="icon">🕒</span> 1.5 Months</span>
-                <span class="meta-tag level-bg beginner"><span class="icon">📊</span> Beginner</span>
-            </div>
-            <div class="card-footer-action">
-                <a href="#">View Details</a>
-                <span class="action-btn-arrow">→</span>
-            </div>
-        </div>
-
-        <div class="course-listing-card">
-            <div class="card-icons-header">
-                <span class="emoji-brand">🐍</span>
-            </div>
-            <h3>Python Programming</h3>
-            <p>Learn Python from basics to advanced and build real-world projects.</p>
-            <div class="card-meta-tags">
-                <span class="meta-tag duration"><span class="icon">🕒</span> 3 Months</span>
-                <span class="meta-tag level-bg beginner"><span class="icon">📊</span> Beginner</span>
-            </div>
-            <div class="card-footer-action">
-                <a href="#">View Details</a>
-                <span class="action-btn-arrow">→</span>
-            </div>
-        </div>
-
-        <div class="course-listing-card">
-            <div class="card-icons-header">
-                <span class="text-brand-logo">C</span>
-            </div>
-            <h3>C Programming</h3>
-            <p>Build a strong foundation in C language and programming logic.</p>
-            <div class="card-meta-tags">
-                <span class="meta-tag duration"><span class="icon">🕒</span> 2 Months</span>
-                <span class="meta-tag level-bg beginner"><span class="icon">📊</span> Beginner</span>
-            </div>
-            <div class="card-footer-action">
-                <a href="#">View Details</a>
-                <span class="action-btn-arrow">→</span>
-            </div>
-        </div>
-
-        <div class="course-listing-card">
-            <div class="card-icons-header">
-                <span class="emoji-brand">☕</span>
-            </div>
-            <h3>Java Programming</h3>
-            <p>Learn core Java concepts and build object-oriented applications.</p>
-            <div class="card-meta-tags">
-                <span class="meta-tag duration"><span class="icon">🕒</span> 3 Months</span>
-                <span class="meta-tag level-bg intermediate"><span class="icon">📊</span> Intermediate</span>
-            </div>
-            <div class="card-footer-action">
-                <a href="#">View Details</a>
-                <span class="action-btn-arrow">→</span>
-            </div>
-        </div>
-
-        <div class="course-listing-card">
-            <div class="card-icons-header">
-                <span class="emoji-brand">🌐</span>
-            </div>
-            <h3>Full Web Development</h3>
-            <p>Learn HTML, CSS, JavaScript, PHP and MySQL to build websites.</p>
-            <div class="card-meta-tags">
-                <span class="meta-tag duration"><span class="icon">🕒</span> 4 Months</span>
-                <span class="meta-tag level-bg intermediate"><span class="icon">📊</span> Intermediate</span>
-            </div>
-            <div class="card-footer-action">
-                <a href="#">View Details</a>
-                <span class="action-btn-arrow">→</span>
-            </div>
-        </div>
-
-        <div class="course-listing-card">
-            <div class="card-icons-header">
-                <div class="adobe-badge">Ps</div>
-            </div>
-            <h3>Graphic Design &amp; Photoshop</h3>
-            <p>Learn design principles and Photoshop for creative designing.</p>
-            <div class="card-meta-tags">
-                <span class="meta-tag duration"><span class="icon">🕒</span> 2 Months</span>
-                <span class="meta-tag level-bg beginner"><span class="icon">📊</span> Beginner</span>
-            </div>
-            <div class="card-footer-action">
-                <a href="#">View Details</a>
-                <span class="action-btn-arrow">→</span>
-            </div>
-        </div>
-
-        <div class="course-listing-card compact-row-card">
-            <div class="card-icons-header">
-                <span class="emoji-brand">⌨️</span>
-            </div>
-            <h3>DTP &amp; Kannada Typing</h3>
-            <div class="card-footer-action">
-                <a href="#">View Details</a>
-                <span class="action-btn-arrow">→</span>
-            </div>
-        </div>
-
-        <div class="course-listing-card compact-row-card">
-            <div class="card-icons-header">
-                <span class="emoji-brand">📊</span>
-            </div>
-            <h3>Data Analytics</h3>
-            <div class="card-footer-action">
-                <a href="#">View Details</a>
-                <span class="action-btn-arrow">→</span>
-            </div>
-        </div>
-
-        <div class="course-listing-card compact-row-card">
-            <div class="card-icons-header">
-                <span class="emoji-brand">📢</span>
-            </div>
-            <h3>Digital Marketing</h3>
-            <div class="card-footer-action">
-                <a href="#">View Details</a>
-                <span class="action-btn-arrow">→</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="view-all-btn-container">
-    <a href="#all-courses-section" class="view-all-courses-btn">
-        View All Courses <span class="btn-arrow">→</span>
-    </a>
 </div>
-    </div>
+
+```
